@@ -1,0 +1,19 @@
+.card {
+  padding: 5%;
+  margin: 0 auto;
+  width: 100%;
+}
+.description{
+  line-height: 120%;
+  margin: 0 auto;
+}
+.img-max-width {
+  border: 1px solid #556270;
+}
+
+
+@media (min-width: 992px) {
+  .card {
+   width: 45% !important;
+  }
+}
