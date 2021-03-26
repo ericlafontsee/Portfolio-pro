@@ -33,6 +33,12 @@ export default function Testimonials() {
   const [open, set] = useState(true);
   return (
     <Trail open={open}>
+      <div className="row">
+        <div className="col-12">
+          <div className="pagetitle">TESTIMONIALS</div>
+        </div>
+      </div>
+
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         {/* <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

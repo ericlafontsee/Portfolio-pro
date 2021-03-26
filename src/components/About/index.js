@@ -8,23 +8,23 @@ function Trail({ open, children, ...props }) {
     config: { mass: 5, tension: 1000, friction: 200 },
     opacity: open ? 1 : 0,
     x: open ? 0 : 20,
-    height: open ? 'auto' : 0,
+    height: open ? "auto" : 0,
     from: { opacity: 0, x: 20, height: 0 }
   });
   return (
     <div className="p-0 m-0" {...props}>
-        {trail.map(({ x, height, ...rest }, index) => (
-          <a.div
-            key={items[index]}
-            className="p-0 m-0"
-            style={{
-              ...rest,
-              transform: x.interpolate((x) => `translate3d(0,${x}px,0)`)
-            }}
-          >
-            <a.div style={{ height }}>{items[index]}</a.div>
-          </a.div>
-        ))}
+      {trail.map(({ x, height, ...rest }, index) => (
+        <a.div
+          key={items[index]}
+          className="p-0 m-0"
+          style={{
+            ...rest,
+            transform: x.interpolate((x) => `translate3d(0,${x}px,0)`)
+          }}
+        >
+          <a.div style={{ height }}>{items[index]}</a.div>
+        </a.div>
+      ))}
     </div>
   );
 }
@@ -35,7 +35,12 @@ export default function About() {
     <>
       <div id="about" className="container-fluid">
         <Trail open={open}>
-          <div className="row pt-5">
+          <div className="row">
+            <div className="col-12">
+              <div className="pagetitle">ABOUT ME</div>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-md-5 bio mx-auto">
               <div>
                 Full stack web developer with a background in the music

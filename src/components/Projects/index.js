@@ -38,6 +38,11 @@ export default function Projects() {
     <>
       <div className="projects container">
       <Trail open={open}>
+      <div className="row">
+            <div className="col-12">
+              <div className="pagetitle">PROJECTS</div>
+            </div>
+          </div>
         <div className="row">
           <div className="col-md-12">
             <div className="d-flex flex-wrap justify-content-space-evenly">

@@ -40,8 +40,15 @@ function Contact() {
   const [open, set] = useState(true);
 
   return (
-    <Trail open={open}>
-
+    <div className="container-fluid">
+      <Trail open={open}>
+        <div className="row">
+          <div className="col-md-12">
+            <div className="pagetitle">CONTACT</div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
             <FontAwesomeIcon
               className="icon phone"
               icon={faPhone}
@@ -62,8 +69,10 @@ function Contact() {
               icon={faGithub}
               style={{ background: "none", color: "white", fontSize: "30pt" }}
             />
-       
-    </Trail>
+          </div>
+        </div>
+      </Trail>
+    </div>
   );
 }
 
