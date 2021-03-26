@@ -16,7 +16,7 @@ function Flipcard(props) {
         style={{ opacity: opacity.interpolate((o) => 1 - o), transform }}
       >
         <img
-          className="img-fluid mx-auto"
+          className="projimg img-fluid mx-auto"
           src={process.env.PUBLIC_URL + props.image}
           alt={props.name}
         />

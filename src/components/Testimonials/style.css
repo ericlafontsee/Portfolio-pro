@@ -2,9 +2,18 @@
   width: 50%;
   height: auto;
   color: white;
-  font-size: 2em;
+  font-size: 1.8em;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  
 }
 
-/* .carousel-control-prev, .carousel-control-next{
-  background: none;
-} */
+.carousel-control{
+  background: none !important;
+}
+
+.ref{
+  display: block;
+}
+

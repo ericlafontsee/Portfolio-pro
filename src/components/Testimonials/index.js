@@ -1,14 +1,45 @@
-import React from "react";
 import "./style.css";
+import React, { useState } from "react";
+import { useTrail, a } from "react-spring";
+
+function Trail({ open, children, ...props }) {
+  const items = React.Children.toArray(children);
+  const trail = useTrail(items.length, {
+    config: { mass: 5, tension: 1000, friction: 200 },
+    opacity: open ? 1 : 0,
+    x: open ? 0 : 20,
+    height: open ? 'auto' : 0,
+    from: { opacity: 0, x: 20, height: 0 }
+  });
+  return (
+    <div className="p-0 m-0" {...props}>
+        {trail.map(({ x, height, ...rest }, index) => (
+          <a.div
+            key={items[index]}
+            className="p-0 m-0"
+            style={{
+              ...rest,
+              transform: x.interpolate((x) => `translate3d(0,${x}px,0)`)
+            }}
+          >
+            <a.div style={{ height }}>{items[index]}</a.div>
+          </a.div>
+        ))}
+    </div>
+  );
+}
+
 
 export default function Testimonials() {
+  const [open, set] = useState(true);
   return (
+    <Trail open={open}>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+      {/* <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
+      </ol> */}
 
       <div class="carousel-inner">
         <div class="item active">
@@ -39,9 +70,7 @@ export default function Testimonials() {
             feel Eric would be a great contributor to a goal-oriented team. He
             was a pleasure to have as a student. I know he is ready to step into
             a role and hit the ground running.
-            <br />
-            <br />
-            <i>
+            <i className="ref">
               Anthony Cooper Lead Web Development Instructor - Vanderbilt
               University
             </i>
@@ -69,12 +98,12 @@ export default function Testimonials() {
 
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
-        <span class="sr-only">Previous</span>
       </a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
-        <span class="sr-only">Next</span>
       </a>
     </div>
+    </Trail>
+
   );
 }

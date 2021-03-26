@@ -2,7 +2,8 @@
   background: none !important;
   margin: 20px;
   width: 100%;
-  border: none !important;
+  border-radius: 5% !important;
+
 }
 .c {
   margin: 0;
@@ -12,6 +13,7 @@
   cursor: pointer;
   will-change: transform, opacity;
   background: none;
+  border-radius: 2%;
 }
 
 .front {
@@ -45,9 +47,11 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #000000;
   margin: 20px auto;
   position: relative;
   top: 0;
-  /* /repotest */
 }
 
+.projimg{
+  border-radius: 2%;
+}
 
 .links{
  position: absolute;
