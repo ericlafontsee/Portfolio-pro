@@ -1,12 +1,10 @@
-import React from 'react';
-import { bool } from 'prop-types';
-import { StyledMenu } from './Menu.styled';
-
+import React from "react";
+import { bool } from "prop-types";
+import { StyledMenu } from "./Menu.styled";
 
 //Open Nav Menu Component
 
 const Menu = ({ open, ...props }) => {
-  
   const isHidden = open ? true : false;
   const tabIndex = isHidden ? 0 : -1;
 
@@ -17,19 +15,22 @@ const Menu = ({ open, ...props }) => {
       </a>
       <a href="/projects" tabIndex={tabIndex}>
         Projects
-        </a>
+      </a>
       <a href="/contact" tabIndex={tabIndex}>
-       Contact
-        </a>
+        Contact
+      </a>
+      <a href="/testimonials" tabIndex={tabIndex}>
+        Testimonials
+      </a>
       <a href="/resume" tabIndex={tabIndex}>
-       Resume
-        </a>
+        Resume
+      </a>
     </StyledMenu>
-  )
-}
+  );
+};
 
 Menu.propTypes = {
-  open: bool.isRequired,
-}
+  open: bool.isRequired
+};
 
 export default Menu;
