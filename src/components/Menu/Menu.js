@@ -21,6 +21,9 @@ const Menu = ({ open, ...props }) => {
       <a href="/contact" tabIndex={tabIndex}>
        Contact
         </a>
+      <a href="/resume" tabIndex={tabIndex}>
+       Resume
+        </a>
     </StyledMenu>
   )
 }

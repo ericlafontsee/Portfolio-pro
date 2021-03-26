@@ -40,27 +40,29 @@ function Contact() {
   const [open, set] = useState(true);
 
   return (
-    <Trail open={open} onClick={() => set((state) => !state)}>
-        <FontAwesomeIcon
-          className="icon phone"
-          icon={faPhone}
-          style={{ background: "none", color: "white", fontSize: "30pt" }}
-        />
-        <FontAwesomeIcon
-          className="icon email"
-          icon={faEnvelope}
-          style={{ background: "none", color: "white", fontSize: "30pt" }}
-        />
-        <FontAwesomeIcon
-          className="icon linkedin"
-          icon={faLinkedin}
-          style={{ background: "none", color: "white", fontSize: "30pt" }}
-        />
-        <FontAwesomeIcon
-          className="icon githubico"
-          icon={faGithub}
-          style={{ background: "none", color: "white", fontSize: "30pt" }}
-        />
+    <Trail open={open}>
+
+            <FontAwesomeIcon
+              className="icon phone"
+              icon={faPhone}
+              style={{ background: "none", color: "white", fontSize: "30pt" }}
+            />
+            <FontAwesomeIcon
+              className="icon email"
+              icon={faEnvelope}
+              style={{ background: "none", color: "white", fontSize: "30pt" }}
+            />
+            <FontAwesomeIcon
+              className="icon linkedin"
+              icon={faLinkedin}
+              style={{ background: "none", color: "white", fontSize: "30pt" }}
+            />
+            <FontAwesomeIcon
+              className="icon githubico"
+              icon={faGithub}
+              style={{ background: "none", color: "white", fontSize: "30pt" }}
+            />
+       
     </Trail>
   );
 }

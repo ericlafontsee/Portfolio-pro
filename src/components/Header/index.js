@@ -40,7 +40,7 @@ function Header() {
       <div className="row">
         <div className="col-md-10">
         <img
-          className=" img logo"
+          className="img logo"
           src={process.env.PUBLIC_URL + "/images/logo.png"}
           alt={'logo'}
         />
