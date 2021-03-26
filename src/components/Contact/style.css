@@ -1,26 +1,26 @@
+.contact{
+  min-height: 500px;
+}
 .trails-main {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   cursor: pointer;
   display: flex;
   justify-content: center;
 }
 
-.trails-text {
-  position: relative;
-  width: 100%;
-  /* height: 110px; */
-  /* line-height: 110px; */
-  color: black;
-  /* font-size: 8em; */
-  /* font-weight: 800; */
-  /* letter-spacing: -9px; */
-  will-change: transform, opacity;
-  overflow: hidden;
-}
 
 .trails-text > div {
   overflow: hidden;
+}
+/* 
+.contactico{
+  margin: 0 auto !important;
+  display: flex;
+} */
+
+.icons{
+margin-top: 100px;
 }
