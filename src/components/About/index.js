@@ -37,7 +37,7 @@ export default function About() {
         <Trail open={open}>
           <div className="row">
             <div className="col-12">
-              <div className="pagetitle">ABOUT ME</div>
+              <div className="pagetitle">ABOUT</div>
             </div>
           </div>
           <div className="row">
