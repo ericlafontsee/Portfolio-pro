@@ -18,10 +18,9 @@ div.mainContent{
   height: auto;
   margin-bottom: 0;
   background: linear-gradient(to bottom, #2e2e2c, #492527);
-  /* background-image: url('/images/downshift.png'); */
+  /* background: url('./images/downshift.png'); */
   /* clip-path: polygon(0% 0%, 300% 0%, 0% 100%, 0% 100%); */
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   overflow: scroll;
 }

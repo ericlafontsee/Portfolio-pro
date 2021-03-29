@@ -1,6 +1,7 @@
 import "./style.css";
 import React, { useState } from "react";
 import { useTrail, a } from "react-spring";
+import Testimonials from "../../components/Testimonials";
 
 function Trail({ open, children, ...props }) {
   const items = React.Children.toArray(children);
@@ -64,6 +65,18 @@ export default function About() {
               />
             </div>
           </div>
+          {/* <div
+            className="row testimonials"
+            style={{
+              marginTop: '-200px',
+              background: `url(${process.env.PUBLIC_URL}/images/wave.svg)`
+            }}
+          >
+            <div className="col-md-12">
+              <Testimonials />
+            </div>
+
+          </div> */}
         </Trail>
       </div>
     </>

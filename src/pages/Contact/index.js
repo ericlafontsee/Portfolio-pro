@@ -39,7 +39,7 @@ function Contact() {
   const [open, set] = useState(true);
 
   return (
-    <div className="container-fluid contact">
+    <div className="container contact">
       <Trail open={open}>
         <div className="row">
           <div className="col-md-12">
