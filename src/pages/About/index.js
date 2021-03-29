@@ -33,7 +33,7 @@ export default function About() {
   const [open, set] = useState(true);
   return (
     <>
-      <div id="about" className="container-fluid">
+      <div id="about" className="container">
         <Trail open={open}>
           <div className="row">
             <div className="col-12">
@@ -56,7 +56,7 @@ export default function About() {
                 member.
               </div>
             </div>
-            <div className="col-md-3 mx-auto propic">
+            <div className="col-md-5 mx-auto propic">
               <img
                 src={process.env.PUBLIC_URL + "/images/professional_pic.JPG"}
                 className="img-fluid "
