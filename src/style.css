@@ -3,39 +3,43 @@ body,
 #root {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
   overflow-x: hidden;
+  overflow: scroll;
   user-select: none;
-  background: rgba(0,0,0, 0.4);
+  /* background: rgba(0,0,0, 0.4); */
 }
 
-
-div.mainContent{
+div.mainContent {
   padding-top: 50px;
   width: 100%;
-  min-height: 450px;
-  height: auto;
-  margin-bottom: 0;
+  min-height: 900px;
+  /* height: 100%; */
+  /* margin-bottom: 0; */
   background: linear-gradient(to bottom, #2e2e2c, #492527);
-  /* background: url('./images/downshift.png'); */
   /* clip-path: polygon(0% 0%, 300% 0%, 0% 100%, 0% 100%); */
   display: flex;
   justify-content: center;
-  overflow: scroll;
+  /* overflow: visible; */
+  position: relative;
 }
 
-div.polygon{
-  border: none !important;
-  padding: 0 !important;
-  margin-top: -5px !important;
+div.mainContent::after {
+  content: "";
+  position: absolute;
+  margin-top: -400px;
+  top: 50%;
+  left: 0;
+  height: 100%;
   width: 100%;
-  min-height: 300px;
-  background: #492527;
-  clip-path: polygon(0% 0%, 200% 0%, 0% 100%, 0% 100%);
+  background: url("./assets/images/wave.svg") bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.pagetitle{
+
+.pagetitle {
   margin-bottom: 20px;
   width: 100%;
   color: white;
@@ -44,4 +48,3 @@ div.polygon{
   display: flex;
   justify-content: center;
 }
-

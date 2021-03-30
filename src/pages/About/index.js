@@ -1,7 +1,6 @@
 import "./style.css";
 import React, { useState } from "react";
 import { useTrail, a } from "react-spring";
-import Testimonials from "../../components/Testimonials";
 
 function Trail({ open, children, ...props }) {
   const items = React.Children.toArray(children);
@@ -34,14 +33,14 @@ export default function About() {
   const [open, set] = useState(true);
   return (
     <>
-      <div id="about" className="container">
+      <div id="about" className="container-fluid">
         <Trail open={open}>
           <div className="row">
             <div className="col-12">
               <div className="pagetitle">ABOUT</div>
             </div>
           </div>
-          <div className="row">
+          <div className="row pb-5 mb-5">
             <div className="col-md-5 bio mx-auto">
               <div>
                 Full stack web developer with a background in the music
@@ -57,7 +56,7 @@ export default function About() {
                 member.
               </div>
             </div>
-            <div className="col-md-5 mx-auto propic">
+            <div className="col-md-3 mx-auto propic">
               <img
                 src={process.env.PUBLIC_URL + "/images/professional_pic.JPG"}
                 className="img-fluid "
@@ -65,18 +64,6 @@ export default function About() {
               />
             </div>
           </div>
-          {/* <div
-            className="row testimonials"
-            style={{
-              marginTop: '-200px',
-              background: `url(${process.env.PUBLIC_URL}/images/wave.svg)`
-            }}
-          >
-            <div className="col-md-12">
-              <Testimonials />
-            </div>
-
-          </div> */}
         </Trail>
       </div>
     </>
